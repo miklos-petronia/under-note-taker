@@ -1,16 +1,17 @@
-// Dependency
+// dependencies
 const path = require('path');
 
-// Routing
+
+// routing
 module.exports = (app) => {
 
-// Developing routes
-// GET /notes ought to restore the notes.html file.
+    // creating routes
+    // GET /notes should return the notes.html file.
     app.get('/notes', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/notes.html'));
     });
 
-// GET * ought to restore the index.html file.
+    // GET * should return the index.html file.
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     })

@@ -1,0 +1,28 @@
+{
+  "name": "under-note-taker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miklos-petronia/under-note-taker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miklos-petronia/under-note-taker/issues"
+  },
+  "homepage": "https://github.com/miklos-petronia/under-note-taker#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "uniqid": "^5.4.0"
+  }
+}
