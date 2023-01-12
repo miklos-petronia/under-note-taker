@@ -1,14 +1,14 @@
-let noteTitle;
-let noteText;
-let saveNoteBtn;
-let newNoteBtn;
+let writtenTitle;
+let writtenText;
+let saveNoteButton;
+let newNoteButton;
 let noteList;
 
 if (window.location.pathname === '/notes') {
-  noteTitle = document.querySelector('.note-title');
-  noteText = document.querySelector('.note-textarea');
-  saveNoteBtn = document.querySelector('.save-note');
-  newNoteBtn = document.querySelector('.new-note');
+  writtenTitle = document.querySelector('.note-title');
+  writtenText = document.querySelector('.note-textarea');
+  saveNoteButton = document.querySelector('.save-note');
+  newNoteButton = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
@@ -51,25 +51,25 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  hide(saveNoteBtn);
+  hide(saveNoteButton);
 
   if (activeNote.id) {
-    noteTitle.setAttribute('readonly', true);
-    noteText.setAttribute('readonly', true);
-    noteTitle.value = activeNote.title;
-    noteText.value = activeNote.text;
+    writtenTitle.setAttribute('readonly', true);
+    writtenText.setAttribute('readonly', true);
+    writtenTitle.value = activeNote.title;
+    writtenText.value = activeNote.text;
   } else {
-    noteTitle.removeAttribute('readonly');
-    noteText.removeAttribute('readonly');
-    noteTitle.value = '';
-    noteText.value = '';
+    writtenTitle.removeAttribute('readonly');
+    writtenText.removeAttribute('readonly');
+    writtenTitle.value = '';
+    writtenText.value = '';
   }
 };
 
 const handleNoteSave = () => {
   const newNote = {
-    title: noteTitle.value,
-    text: noteText.value,
+    title: writtenTitle.value,
+    text: writtenText.value,
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
@@ -109,10 +109,10 @@ const handleNewNoteView = (e) => {
 };
 
 const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
-    hide(saveNoteBtn);
+  if (!writtenTitle.value.trim() || !writtenText.value.trim()) {
+    hide(saveNoteButton);
   } else {
-    show(saveNoteBtn);
+    show(saveNoteButton);
   }
 };
 
@@ -170,14 +170,14 @@ const renderNoteList = async (notes) => {
   }
 };
 
-// Gets notes from the db and renders them to the sidebar
+// Obtain notes from the db and destribute them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
-  saveNoteBtn.addEventListener('click', handleNoteSave);
+  saveNoteButton.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
-  noteTitle.addEventListener('keyup', handleRenderSaveBtn);
-  noteText.addEventListener('keyup', handleRenderSaveBtn);
+  writtenTitle.addEventListener('keyup', handleRenderSaveBtn);
+  writtenText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
 getAndRenderNotes();
