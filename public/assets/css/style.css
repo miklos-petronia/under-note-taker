@@ -10,8 +10,8 @@ body {
 }
 
 .icons i {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -62,7 +62,7 @@ body {
 
 .list-item-title {
     display: inline-block;
-    width: 75%;
+    width: 90%;
 }
 
 .list-container i {
