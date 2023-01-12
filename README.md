@@ -42,9 +42,7 @@ This command line will run the server in which you can find the page on localhos
 ## Screenshots
 
 ## Credits
-Columbia coding bootcamp videos
-You tube video
-Some examples on git hub
+Columbia coding bootcamp videos, You tube video, Some examples on git hub
 ## License
 MIT
 
