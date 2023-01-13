@@ -40,6 +40,8 @@ This command line will run the server in which you can find the page on localhos
 
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/113649566/212430400-3f1905ce-06c4-4ebf-8bc0-9d3933118777.png)
+
 
 ## Credits
 Columbia coding bootcamp videos, You tube video, Some examples on git hub
